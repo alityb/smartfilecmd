@@ -1,0 +1,42 @@
+# Build artifacts
+smartfilecmd
+cpp_performance_test
+build/
+*.o
+*.a
+*.so
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Environment variables (contains API keys)
+.env
+
+# Test files
+test_*.txt
+sample_*.txt 

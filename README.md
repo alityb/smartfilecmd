@@ -1,4 +1,4 @@
-# SmartFileCmd 🚀
+# SmartFileCmd
 
 **A Natural Language File Manager CLI** that understands English commands and executes file operations.
 
@@ -12,7 +12,6 @@ SmartFileCmd lets you manage files using natural language commands like:
 
 ## 🎯 Features
 
-### ✅ **Implemented & Working**
 - **Natural Language Parsing**: Understands English commands without API calls
 - **Gemini API Integration**: API integration implemented (currently disabled for testing)
 - **File Operations**: Delete, move, copy, create folders

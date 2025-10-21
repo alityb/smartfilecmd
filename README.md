@@ -10,19 +10,14 @@ SmartFileCmd lets you manage files using natural language commands like:
 - `"copy all PDFs from Documents to Backup"`
 - `"create a new folder called Projects"`
 
-## 🎯 Features
+## Features
 
 - **Natural Language Parsing**: Understands English commands without API calls
 - **Gemini API Integration**: API integration implemented (currently disabled for testing)
 - **File Operations**: Delete, move, copy, create folders
-- **Recursive Operations**: `**/*.txt` scans subdirectories with `--recursive`
-- **Verbose Output**: `--verbose` shows detailed operation information
-- **Dry-Run Mode**: `--dry-run` previews operations safely
-- **Force Mode**: `--force` skips confirmation prompts
-- **Pattern Matching**: Supports `*.txt`, `**/*.txt`, etc.
 - **Safety Features**: Validation, dry-run, error handling
 
-## ⚡ Performance
+## Performance
 
 **Real Performance Measurements** (tested on actual hardware):
 
@@ -49,12 +44,7 @@ SmartFileCmd lets you manage files using natural language commands like:
 
 **Built with C++17/20** for maximum performance on large file operations.
 
-## 🏗️ Build
-
-### Prerequisites
-- **C++17/20 compiler** (g++-11 or later)
-- **Python 3.10+**
-- **Make** (for building)
+## Build
 
 ### Quick Build
 ```bash
@@ -73,7 +63,7 @@ cd cpp_backend
 g++-11 -std=c++20 -O2 -o ../smartfilecmd main.cpp actions.cpp utils.cpp -lstdc++fs
 ```
 
-## 🚀 Basic Usage
+## Basic Usage
 
 ```bash
 # Basic operations
@@ -86,7 +76,7 @@ smartfilecli "remove all **/*.log files" --recursive --verbose --dry-run
 smartfilecli "create a new folder called Projects in Documents"
 ```
 
-## 💡 Common Use Cases
+## Common Use Cases
 
 ### **Cleanup Operations**
 ```bash
@@ -116,7 +106,7 @@ smartfilecli "create a new folder called MyProject in Documents"
 smartfilecli "create a new folder called src in MyProject"
 ```
 
-## 🔧 How It Works
+## How It Works
 
 1. **Natural Language Parsing**: CLI parses English commands using fallback parser (Gemini API ready but disabled)
 2. **Command Validation**: Validates operation safety and parameters
@@ -126,7 +116,7 @@ smartfilecli "create a new folder called src in MyProject"
 
 **Note**: Full Gemini API integration is implemented and ready - just needs to be enabled by uncommenting the API call code.
 
-## 📋 Command Patterns
+## Command Patterns
 
 ### **Delete Operations**
 ```bash
@@ -153,7 +143,7 @@ smartfilecli "create a new folder called Projects"      # Create in current dir
 smartfilecli "create a new folder called src in Projects"
 ```
 
-## 🛡️ Safety Features
+## Safety Features
 
 - **Dry-Run Mode**: Always preview operations first
 - **Path Validation**: Prevents operations on system directories
@@ -161,7 +151,7 @@ smartfilecli "create a new folder called src in Projects"
 - **Error Handling**: Graceful failure with detailed error messages
 - **Operation Logging**: Tracks all file operations
 
-## 📊 Output Examples
+## Output Examples
 
 ### **Verbose Delete Operation**
 ```
@@ -187,7 +177,7 @@ smartfilecli "create a new folder called src in Projects"
 ✅ Would delete 3 files
 ```
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 smartfilecli/
@@ -206,7 +196,7 @@ smartfilecli/
 └── install.sh            # Installation script
 ```
 
-## 🚀 Installation
+## Installation
 
 ### **Quick Install**
 ```bash
@@ -229,33 +219,7 @@ pip install -r requirements.txt
 chmod +x smartfilecli
 ```
 
-## 🔧 Troubleshooting
-
-### **Build Issues**
-```bash
-# Check compiler
-g++ --version
-
-# Install build tools
-sudo apt install build-essential
-
-# Manual build
-g++-11 -std=c++20 -O2 -o smartfilecmd cpp_backend/*.cpp -lstdc++fs
-```
-
-### **Runtime Issues**
-```bash
-# Check permissions
-ls -la smartfilecmd
-
-# Test backend directly
-echo '{"action":"delete","pattern":".txt","source":".","destination":"","dry_run":true}' | ./smartfilecmd
-
-# Verbose mode for debugging
-smartfilecli "test command" --verbose
-```
-
-## 🧪 Development
+## Development
 
 ### **Running Tests**
 ```bash
@@ -272,7 +236,7 @@ cd tests && make && ./test_backend
 3. **Parsing**: Enhance `gemini_parser.py` for new command types
 4. **Testing**: Add tests in `tests/` directory
 
-## 📝 Limitations & Future Work
+## Limitations & Future Work
 
 ### **Current Limitations**
 - **Pattern Matching**: Basic glob patterns only
@@ -286,14 +250,6 @@ cd tests && make && ./test_backend
 - **Batch Processing**: Multiple command execution
 - **GUI Interface**: Web-based file manager
 
-## 🤝 Contributing
-
-1. **Fork** the repository
-2. **Create** a feature branch
-3. **Implement** your changes
-4. **Add** tests for new functionality
-5. **Submit** a pull request
-
 ### **Development Setup**
 ```bash
 git clone <your-fork>
@@ -305,19 +261,3 @@ pip install -r requirements.txt
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **C++ Standard Library**: For high-performance file operations
-- **Python Community**: For excellent CLI and parsing libraries
-- **Open Source**: For inspiration and best practices
-
-## 💬 Support
-
-- **Issues**: Report bugs and feature requests
-- **Discussions**: Ask questions and share ideas
-- **Wiki**: Detailed documentation and examples
-
----
-
-**Built with ❤️ for developers who want to manage files naturally and efficiently.**
